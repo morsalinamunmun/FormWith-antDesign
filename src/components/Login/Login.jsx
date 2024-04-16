@@ -50,13 +50,13 @@ const Login = () => (
         >
           <Input />
         </Form.Item>
-        <Button type="primary" htmlType="submit" block style={{ fontWeight: '600'}}>
+        <Button  htmlType="submit" block style={{ fontWeight: '600', backgroundColor: 'rgb(67 56 202)', color: 'white'}}>
           CONTINUE
         </Button>
       </Form>
-      <Flex style={{marginTop: '20px'}}>
+      <Flex gap='small' style={{marginTop: '20px'}}>
         <Typography.Text type='secondary' style={{fontSize: '18px'}}>No Acoount?</Typography.Text>
-      <Link to="/signup">
+      <Link to="/signup" style={{color: 'rgb(67 56 202)'}}>
         Sign Up
       </Link>
       </Flex>
