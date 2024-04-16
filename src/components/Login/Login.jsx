@@ -26,13 +26,17 @@ const Login = () => (
             paddingLeft: '10px',
             borderRadius: '5px',
             marginTop: '20px',
-            marginBottom: '7px'
-          }}><FcGoogle /><p>Continue with GitHub</p></Flex>
+            marginBottom: '7px',
+            height: '35px',
+            fontWeight: '500'
+          }}><FcGoogle /><p style={{color: 'rgb(100 116 139)'}}>Continue with GitHub</p></Flex>
           <Flex align='center' gap="small" style={{
             border: '1px solid #e8e8e8',
             paddingLeft: '10px',
             borderRadius: '5px',
-          }}><FaGithub /><p>Continue with Google</p></Flex>
+            height: '35px',
+            fontWeight: '500',
+          }}><FaGithub /><p style={{color: 'rgb(100 116 139)'}}>Continue with Google</p></Flex>
         </div>
         <Divider style={{color: 'rgb(148 163 184)', borderColor: 'rgb(148 163 184)'}}>or</Divider>
         <Form.Item
@@ -46,8 +50,8 @@ const Login = () => (
         >
           <Input />
         </Form.Item>
-        <Button type="primary" htmlType="submit" block>
-          Continue
+        <Button type="primary" htmlType="submit" block style={{ fontWeight: '600'}}>
+          CONTINUE
         </Button>
       </Form>
       <Flex style={{marginTop: '20px'}}>
