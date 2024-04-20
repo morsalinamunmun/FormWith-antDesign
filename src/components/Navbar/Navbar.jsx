@@ -1,28 +1,22 @@
-import
-{ Menu }
-from
-"antd"
+import { Menu }
+    from
+    "antd"
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     return (
-        <div  style={{height: '100vh', marginLeft: '400px'}}>
-            <Menu
-            mode="horizontal"
-            const items ={[
-                {
-                    label: 'Home',
-                    key: "home"
-                },
-                {
-                    label: "Table",
-                    key: "table"
-                },
-                {
-                    label: "Login",
-                    key: "login"
-                }
-            ]}
-            ></Menu>
+        <div>
+            <Menu mode="horizontal">
+                <Menu.Item key="home">
+                    <Link to="/">Home</Link>
+                </Menu.Item>
+                <Menu.Item key="table">
+                    <Link to="/table">Table</Link>
+                </Menu.Item>
+                <Menu.Item key="login">
+                    <Link to="/login">Login</Link>
+                </Menu.Item>
+            </Menu>
         </div>
     );
 };
