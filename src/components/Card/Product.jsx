@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { List, Card, Image } from 'antd';
+import { List, Card, Image, Typography } from 'antd';
 import  '../../Main.css'
 const Product = () => {
     const [items, setItems] = useState([]);
@@ -12,12 +12,18 @@ const Product = () => {
     console.log(items);
     return (
         <div>
+            <p style={{fontSize: '40px', font: 'bold'}}>Products</p>
             <List
             grid={{column: 3}}
              renderItem={(item)=> {
                 return ( <Card 
                 title={item.title} 
-                cover={<Image src={item.thumbnail}/>}></Card>
+                cover={<Image className="cardImage" src={item.thumbnail}/>}
+                >
+                    <Card.Meta title={<Typography.Paragraph>Price: ${item.price} {" "}
+                    <Typography.Text delete type="danger">{parseFloat(item.price + (item.price*item.discountPercentage)).toFixed(2)}</Typography.Text>
+                    </Typography.Paragraph>}></Card.Meta>
+                </Card>
                 )
             }} dataSource={items}></List>
         </div>

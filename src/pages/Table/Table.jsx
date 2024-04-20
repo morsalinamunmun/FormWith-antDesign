@@ -22,7 +22,8 @@ const columns = [
     render: () => <a>Delete</a>,
   },
 ];
-const data = [
+
+/* const data = [
   {
     key: 1,
     name: 'John Brown',
@@ -51,7 +52,8 @@ const data = [
     address: 'Sydney No. 1 Lake Park',
     description: 'My name is Joe Black, I am 32 years old, living in Sydney No. 1 Lake Park.',
   },
-];
+]; */
+
 const TableData = () => (
   <Table
     columns={columns}
@@ -67,7 +69,7 @@ const TableData = () => (
       ),
       rowExpandable: (record) => record.name !== 'Not Expandable',
     }}
-    dataSource={data}
+    // dataSource={data}
   />
 );
 export default TableData;
